@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>RATISS VEGA — The Constellation Engine</title>
+<style>
+  :root{--bg:#060612;--panel:rgba(18,18,42,0.75);--purple:#7B2CBF;--violet:#B185DB;--cyan:#00F5FF;--white:#F8F9FA;--muted:#9aa0b8}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:radial-gradient(1200px 600px at 50% -10%, #1a1140 0%, transparent 60%), var(--bg);color:var(--white);font-family:Inter,system-ui,Segoe UI,sans-serif;min-height:100vh}
+  a{color:var(--cyan)}
+  .wrap{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+  .top{display:flex;justify-content:space-between;align-items:center;padding:12px 0}
+  .brand{display:flex;gap:12px;align-items:center}
+  .brand img{width:42px;height:42px;border-radius:10px;box-shadow:0 0 20px rgba(123,44,191,.6)}
+  .badge{font-size:11px;letter-spacing:.12em;text-transform:uppercase;background:linear-gradient(90deg,var(--purple),var(--violet));padding:6px 10px;border-radius:999px}
+  .hero{text-align:center;padding:18px 0 10px}
+  .hero h1{font-family:Space Grotesk,Segoe UI,sans-serif;font-size:48px;letter-spacing:.08em;background:linear-gradient(180deg,#fff,#B185DB);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+  .hero p{color:var(--muted);margin-top:8px;font-size:15px}
+  .banner{margin:18px 0 24px;border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.08);box-shadow:0 10px 40px rgba(0,0,0,.5)}
+  .banner img{width:100%;display:block}
+  .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-top:16px}
+  @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--panel);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px}
+  .card h3{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);margin-bottom:10px}
+  .metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:14px 0}
+  .metric{background:rgba(255,255,255,.05);border-radius:12px;padding:12px;text-align:center}
+  .metric b{font-size:22px;display:block}
+  .metric span{font-size:11px;color:var(--muted);letter-spacing:.06em}
+  .imgCard img{width:100%;border-radius:12px;border:1px solid rgba(255,255,255,.08)}
+  .cta{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(90deg,var(--purple),var(--violet));color:white;padding:12px 18px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 20px rgba(123,44,191,.4)}
+  .cta:hover{transform:translateY(-1px)}
+  .gps{display:flex;gap:8px;align-items:center;margin:6px 0}
+  .bar{height:8px;border-radius:999px;background:rgba(255,255,255,.12);flex:1;overflow:hidden}
+  .bar>i{display:block;height:100%;border-radius:999px}
+  .foot{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+  .kpiRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+  .pill{padding:8px 12px;border-radius:999px;background:rgba(123,44,191,.18);border:1px solid rgba(123,44,191,.35);font-size:13px}
+  .mono{font-family:JetBrains Mono,ui-monospace,monospace}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <img src="assets/ratiss-vega-logo.png" alt="VEGA">
+      <div><div style="font-weight:800;letter-spacing:.12em">RATISS VEGA</div><div class="mono" style="font-size:11px;color:var(--muted)">CPU-NATIVE · MIT · RATISS LABS</div></div>
+    </div>
+    <div class="badge">Design Frozen · Phase 0</div>
+  </div>
+
+  <div class="hero">
+    <h1>RATISS VEGA</h1>
+    <p><b>The Constellation Engine</b> — thinking in constellations, calibrated like the star Vega itself. Successor to RATISS-X.</p>
+    <div class="kpiRow" style="justify-content:center;margin-top:12px">
+      <span class="pill">🧠 Elastic Elite 60–85%</span>
+      <span class="pill">🛰️ GPS Constellation Router</span>
+      <span class="pill">⚡ V3 &lt;400 MB · &lt;0.6s/tok</span>
+    </div>
+  </div>
+
+  <div class="banner"><img src="assets/ratiss-vega-banner.png" alt="banner"></div>
+
+  <div class="metrics">
+    <div class="metric"><b>5/6</b><span>RATISS-X stable<br>now without oracle → VEGA target</span></div>
+    <div class="metric"><b>0.15 ms</b><span>Constellation routing<br>vs 0.06ms single-centroid</span></div>
+    <div class="metric"><b>395 MB</b><span>V3 memory target<br>vs V1 669 MB</span></div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🛰️ GPS Constellation — Live</h3>
+      <div class="gps"><span style="width:18px">Q</span><div class="bar"><i style="width:52%;background:var(--cyan)"></i></div><span class="mono">52% question</span></div>
+      <div class="gps"><span style="width:18px">A</span><div class="bar"><i style="width:12%;background:var(--violet)"></i></div><span class="mono">12% amorce</span></div>
+      <div class="gps"><span style="width:18px">O</span><div class="bar"><i style="width:36%;background:var(--purple)"></i></div><span class="mono">36% oracle</span></div>
+      <p style="margin-top:10px;color:var(--muted);font-size:13px">Arbiter in <b style="color:var(--white)">consensus mode</b> — no centroid dominates. Each token re-votes.</p>
+      <div style="margin-top:12px;padding:10px;background:rgba(0,245,255,.08);border-radius:10px;border:1px solid rgba(0,245,255,.2)" class="mono">prompt → "The capital of France is" → weights [0.52, 0.12, 0.36] → blend Q+A+O MLPs → "Paris" (cos 0.93)</div>
+      <p style="margin-top:14px"><a class="cta" href="docs/ARCHITECTURE.md">See architecture spec →</a></p>
+    </div>
+    <div class="card imgCard">
+      <h3>🔭 Holographic Blueprint</h3>
+      <img src="design/architecture-hologram.png" alt="architecture">
+      <p style="color:var(--muted);font-size:12px;margin-top:8px">AI-generated system hologram: Vega star → GPS → Mixer Core → V3 Engine.</p>
+    </div>
+  </div>
+
+  <div class="grid" style="margin-top:16px">
+    <div class="card imgCard">
+      <h3>💎 Dashboard — Glassmorphism</h3>
+      <img src="design/ui-dashboard.png" alt="dashboard">
+      <p style="color:var(--muted);font-size:12px;margin-top:8px">Mission-control UI: routing trace, memory dial, generation stream, constellation map.</p>
+    </div>
+    <div class="card">
+      <h3>🎨 Design System</h3>
+      <div style="display:flex;gap:8px;margin:8px 0">
+        <div style="flex:1;height:48px;border-radius:10px;background:#7B2CBF"></div>
+        <div style="flex:1;height:48px;border-radius:10px;background:#B185DB"></div>
+        <div style="flex:1;height:48px;border-radius:10px;background:#0A0A1A;border:1px solid #333"></div>
+        <div style="flex:1;height:48px;border-radius:10px;background:#00F5FF"></div>
+      </div>
+      <div class="mono" style="font-size:12px;color:var(--muted)">#7B2CBF Vega Purple · #B185DB Nebula · #0A0A1A Deep Space · #00F5FF Signal Cyan</div>
+      <ul style="margin:14px 0 0 18px;color:var(--muted);line-height:1.7">
+        <li><b style="color:var(--white)">Logo:</b> RATISS-X spiral + Lyra 9-star crown</li>
+        <li><b style="color:var(--white)">Type:</b> Space Grotesk / Inter / JetBrains Mono</li>
+        <li><b style="color:var(--white)">Motion:</b> drift & twinkle, cubic-bezier(0.16,1,0.3,1)</li>
+        <li><b style="color:var(--white)">Stack:</b> AI image-gen + Figma-ready + HTML prototype</li>
+      </ul>
+      <p style="margin-top:12px"><a class="cta" href="docs/DESIGN_SYSTEM.md">Open design tokens →</a></p>
+      <p style="margin-top:10px"><a class="cta" style="background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15)" href="docs/ROADMAP.md">Roadmap to code →</a></p>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:16px">
+    <h3>🧭 What VEGA Changes vs RATISS-X</h3>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+      <div style="background:rgba(255,255,255,.04);padding:12px;border-radius:12px">
+        <div style="color:var(--muted);font-size:12px;letter-spacing:.08em">RATISS-X (DONE)</div>
+        <div style="margin-top:6px">Single elite path, oracle routing, fixed 75%, V1 669MB / 0.94s/tok, 5/6 stable ✅</div>
+      </div>
+      <div style="background:rgba(123,44,191,.12);padding:12px;border-radius:12px;border:1px solid rgba(123,44,191,.3)">
+        <div style="color:var(--violet);font-size:12px;letter-spacing:.08em">RATISS VEGA (DESIGN)</div>
+        <div style="margin-top:6px">Constellation of experts, arbiter vote, elastic 60-85%, V3 395MB / 0.55s/tok, target ≥5/6 without oracle</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    RATISS Labs — Jonathan Evina · Yaoundé, Cameroon 🇨🇲 · One human decides, AIs execute.<br>
+    Predecessor: <a href="https://github.com/jonathansearch/RATISS-X">RATISS-X (MIT, sealed)</a> · This repo: design-only, no training code yet.
+  </div>
+</div>
+</body>
+</html>

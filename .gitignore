@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.venv/
+artifacts/local/
+.hf_cache/
+MANIFESTE.json
+Unselected\ files/
