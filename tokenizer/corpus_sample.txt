@@ -1,0 +1,10 @@
+Bonjour le monde ! Bienvenue à Yaoundé, capitale du Cameroun.
+The capital of France is Paris. The capital of Cameroon is Yaoundé.
+Two plus two equals four. 4 minus 3 equals 1.
+Water is made of hydrogen and oxygen. H2O.
+The French word for cat is chat. The animal that meows is a cat.
+To bake a cake, mix flour and sugar in a bowl, add eggs and butter.
+import torch; model = RatissVegaForCausalLM.from_pretrained("RATISS-VEGA")
+def hello(): print("Mbolo! Hello world from RATISS Labs")
+Yaoundé, Douala, Bafoussam, Bamenda — unity in diversity.
+One human decides, AIs execute. Sealed, reproducible, MIT.

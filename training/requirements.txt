@@ -1,0 +1,8 @@
+torch>=2.0
+transformers>=4.40
+tokenizers>=0.19
+datasets>=2.14
+accelerate>=0.28
+gguf>=0.6
+pyyaml
+safetensors

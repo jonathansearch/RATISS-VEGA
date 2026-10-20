@@ -1,0 +1,14 @@
+{
+  "chat_template": "{% for message in messages %}{{ message.content }}{% endfor %}",
+  "model_max_length": 4096,
+  "padding_side": "right",
+  "bos_token": "<s>",
+  "eos_token": "</s>",
+  "unk_token": "<unk>",
+  "pad_token": "<pad>",
+  "mask_token": "<mask>",
+  "clean_up_tokenization_spaces": false,
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "add_bos_token": true,
+  "add_eos_token": false
+}
